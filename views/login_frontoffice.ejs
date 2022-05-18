@@ -33,6 +33,11 @@
                     <button type="submit" class="btn btn-primary">Se connecter</button>
                     </div>
                   </form>
+                  <a href="/" style="font-size: 14px">Accedez au BackOffice</a>
+                  <%if(locals.erreur){%>
+                    <hr>  
+                    <p><%=erreur%></p> 
+                <%}%>
             </div>
             <div class="col-md-4"></div>
         </div>

@@ -7,10 +7,10 @@ module.exports= (sequelize,DataTypes) => {
         },
         id_vehicule:{
             type: DataTypes.INTEGER,
-            // references:{
-            //     model: 'vehicules',
-            //     key: 'id'
-            // }
+            references:{
+                model: 'vehicules',
+                key: 'id'
+            }
         },
         type: {
             type: DataTypes.STRING

@@ -23,69 +23,68 @@
     <div class="container">
         <div class="row">
              <%- include('./templates/header.ejs');%>
-
         </div>
         <div class="row" id="liste">
             <div class="col-md-2"></div>
             <div class="col-md-8" id="content">
                
-                <h2 class="headerText">Ajouter trajet</h2> <br>
+                <h2 class="headerText">Ajouter trajet</h2> <hr>
 
                     <form action="/ajout_trajet" method="post">
-                        <label class="form-label">Départ</label>
+                        <label class="form-label"><strong>Départ</strong> </label>
                         <div class="row" id="form-row">
-                            <div class="mb-3">
+                            <div class="mb-3 ml-3">
                             <label class="form-label">Date</label>
                                 <input type="date" name="[date_depart]" class="form-control" >
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-3 ml-3">
                             <label class="form-label">Heure</label>
                                 <input type="time" name="[heure_depart]" class="form-control">
                             </div>
-                            <div class="mb-3">
-                            <label class="form-label">Lieu</label>
-                            <input type="text" name="[lieu_depart]" class="form-control">
+                            <div class="mb-3 ml-3 ">
+                                <label class="form-label">Lieu</label>
+                                <input type="text" name="[lieu_depart]" class="form-control">
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-3 ml-3">
                                 <label class="form-label">Kilometrage</label>
                                 <input type="text" name="[kilometrage_depart]" class="form-control">
                             </div>
                         </div>
-                        <label class="form-label">Arrivé</label>
+                        <label class="form-label"><strong>Arrivé</strong></label>
                         <div class="row" id="form-row">
                         
-                            <div class="mb-3">
+                            <div class="mb-3 ml-3">
                                 <label class="form-label">Date</label>
                                     <input type="date" name="[date_arrive]" class="form-control" >
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3 ml-3">
                                 <label class="form-label">Heure</label>
                                     <input type="time" name="[heure_arrive]" class="form-control">
                                 </div>
-                            <div class="mb-3">
+                            <div class="mb-3 ml-3">
                                 <label class="form-label">Lieu</label>
                                 <input type="text" name="[lieu_arrive]" class="form-control">
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-3 ml-3">
                                 <label class="form-label">Kilometrage</label>
                                 <input type="text" name="[kilometrage_arrive]" class="form-control">
                             </div>
                         </div>
-                        <label class="form-label">Carburant</label>
+                        <label class="form-label"><strong>Carburant</strong></label>
                         <div class="row" id="form-row">
                        
-                            <div class="mb-3">
+                            <div class="mb-3 ml-3">
                                 <label class="form-label">Montant</label>
                                 <input type="text" name="[montant_carburant]" class="form-control" placeholder="... AR">
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-3 ml-3">
                                 <label class="form-label">Litres</label>
                                 <input type="text" name="[litre_carburant]" class="form-control" placeholder="... l">
                             </div>
                         
                            
                         </div>
-                        <div class="mb-3 pt-2">
+                        <div class="mb-3 ml-3 pt-2">
                             <button type="submit" class="btn btn-primary">Ajouter</button>
                             </div>
                       </form>

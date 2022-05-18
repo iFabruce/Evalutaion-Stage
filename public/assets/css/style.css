@@ -11,14 +11,14 @@ h1,h2,h3,h4,h5,h6,p,a{
     margin-top: 5%;
 }
 .headerText{
-    font-size: 2.2vw;
+    font-size: 20px;
     font-weight: 800;
 }
 #ajout{
     padding: 2%;
 }
 #form-row{
-    margin-left: 10%;
+    margin-left: 5%;
     padding: 2%;
 }
 .message{
@@ -27,4 +27,8 @@ h1,h2,h3,h4,h5,h6,p,a{
     color: green;
     font-weight: 600;
     border-bottom: 2px solid;
+}
+#liste{
+    margin-top: 5%;
+    padding: 1%;
 }

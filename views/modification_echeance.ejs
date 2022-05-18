@@ -23,15 +23,15 @@
         <div class="row" id="liste">
             <div class="col-md-2"></div>
             <div class="col-md-8" id="content">
-               
-                <h2 class="headerText">Ajouter échéance</h2> <br>
+                
+                <h2 class="headerText">Modification échéance</h2> <br>
 
-                    <form action="/ajout_echeance" method="post">
+                    <form action="/modification_echeance" method="post">
                         <div class="mb-3">
                          
                                 <select name="[id_vehicule]" class="form-control">
                                     <%vehicules.forEach(vehicule => {  %>
-                                        <option value="<%=vehicule.dataValues.id%>"><%=vehicule.dataValues.marque%></option>
+                                        <option value="<%=vehicule.dataValues.id%>"  <%if(echeance[0].dataValues.id_vehicule == vehicule.dataValues.id){%> selected  <% }%> ><%=vehicule.dataValues.marque%></option>
                                     <% })%>
                                 </select>
                         </div>
@@ -39,21 +39,22 @@
                             <label class="form-label">Type</label>
 
                             <select name="[type]" class="form-control">
-                                <option value="Assurance">Assurance</option>
-                                <option value="Visite">Visite Technique</option>
+                                <option value="Assurance" <%if(echeance[0].dataValues.type == "Assurance"){%> selected  <% }%>>Assurance</option>
+                                <option value="Visite"  <%if(echeance[0].dataValues.type == "Visite"){%> selected  <% }%>>Visite Technique</option>
 
                             </select>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Date Ajout</label>
-                            <input type="date" name="[date_ajout]" class="form-control" placeholder="XXXX ABC">
+                            <input type="date" name="[date_ajout]" value="<%=echeance[0].dataValues.date_ajout%>" class="form-control" placeholder="XXXX ABC">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Date Expiration</label>
-                            <input type="date" name="[date_expiration]" class="form-control" placeholder="XXXX ABC">
+                            <input type="date" name="[date_expiration]"  value="<%=echeance[0].dataValues.date_expiration%>" class="form-control" placeholder="XXXX ABC">
                         </div>
                         <div class="mb-3 pt-2">
-                            <button type="submit" class="btn btn-primary">Ajouter</button>
+                            <input type="hidden" name="[id]" value="<%=echeance[0].dataValues.id%>">
+                            <button type="submit" class="btn btn-primary">Appliquer</button>
                             </div>
                       </form>
                 </div>

@@ -33,8 +33,12 @@
                     <button type="submit" class="btn btn-primary">Se connecter</button>
                     </div>
                   </form>
-                  <a href="/vers_login_frontoffice" style="font-size: 1.2vw">Accedez au FrontOffice</a>
-            </div>
+                  <a href="/vers_login_frontoffice" style="font-size: 14px">Accedez au FrontOffice</a>
+                  <%if(locals.erreur){%>
+                    <hr>  
+                    <p><%=erreur%></p> 
+                <%}%>
+                </div>
             <div class="col-md-4"></div>
         </div>
         <div class="row"></div>
