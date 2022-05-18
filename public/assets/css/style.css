@@ -18,5 +18,13 @@ h1,h2,h3,h4,h5,h6,p,a{
     padding: 2%;
 }
 #form-row{
-    padding-left: 10%;
+    margin-left: 10%;
+    padding: 2%;
+}
+.message{
+    font-size: 1.6vw;
+    text-align: center;
+    color: green;
+    font-weight: 600;
+    border-bottom: 2px solid;
 }

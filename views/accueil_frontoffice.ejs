@@ -10,12 +10,21 @@
     <link rel="stylesheet" href="/static/assets/js/bootstrap.js">
     <link rel="stylesheet" href="/static/assets/js/bootstrap.min.js">
     <link rel="stylesheet" href="/static/assets/css/style.css">
+    
+    <link rel="stylesheet" href="/static/assets/css/nav.css">
+    <link rel="stylesheet" href="/static/assets/js/nav.js">
+
 
 </head>
 <body>  
-    <% const login=""%> 
+    <%if(locals.message){%>
+        <p class="message"><%=message%></p> 
+    <%}%>
     <div class="container">
-     
+        <div class="row">
+             <%- include('./templates/header.ejs');%>
+
+        </div>
         <div class="row" id="liste">
             <div class="col-md-2"></div>
             <div class="col-md-8" id="content">
@@ -26,32 +35,40 @@
                         <label class="form-label">Départ</label>
                         <div class="row" id="form-row">
                             <div class="mb-3">
-                            <label class="form-label">Date et heure</label>
-                            <input type="text" name="[dateheure]" class="form-control" placeholder="XXXX ABC">
+                            <label class="form-label">Date</label>
+                                <input type="date" name="[date_depart]" class="form-control" >
+                            </div>
+                            <div class="mb-3">
+                            <label class="form-label">Heure</label>
+                                <input type="time" name="[heure_depart]" class="form-control">
                             </div>
                             <div class="mb-3">
                             <label class="form-label">Lieu</label>
-                            <input type="text" name="[lieu]" class="form-control" placeholder="Mazda, Renault...">
+                            <input type="text" name="[lieu_depart]" class="form-control">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Kilometrage</label>
-                                <input type="text" name="[kilometrage]" class="form-control" placeholder="GT , 206">
+                                <input type="text" name="[kilometrage_depart]" class="form-control">
                             </div>
                         </div>
                         <label class="form-label">Arrivé</label>
                         <div class="row" id="form-row">
                         
                             <div class="mb-3">
-                                <label class="form-label">Date et heure</label>
-                                <input type="text" name="[dateheure]" class="form-control" placeholder="XXXX ABC">
-                            </div>
+                                <label class="form-label">Date</label>
+                                    <input type="date" name="[date_arrive]" class="form-control" >
+                                </div>
+                                <div class="mb-3">
+                                <label class="form-label">Heure</label>
+                                    <input type="time" name="[heure_arrive]" class="form-control">
+                                </div>
                             <div class="mb-3">
                                 <label class="form-label">Lieu</label>
-                                <input type="text" name="[lieu]" class="form-control" placeholder="Mazda, Renault...">
+                                <input type="text" name="[lieu_arrive]" class="form-control">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Kilometrage</label>
-                                <input type="text" name="[kilometrage]" class="form-control" placeholder="GT , 206">
+                                <input type="text" name="[kilometrage_arrive]" class="form-control">
                             </div>
                         </div>
                         <label class="form-label">Carburant</label>
@@ -59,11 +76,11 @@
                        
                             <div class="mb-3">
                                 <label class="form-label">Montant</label>
-                                <input type="text" name="[montant]" class="form-control" placeholder="GT , 206">
+                                <input type="text" name="[montant_carburant]" class="form-control" placeholder="... AR">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Litres</label>
-                                <input type="text" name="[litre]" class="form-control" placeholder="GT , 206">
+                                <input type="text" name="[litre_carburant]" class="form-control" placeholder="... l">
                             </div>
                         
                            
