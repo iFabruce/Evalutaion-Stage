@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "root",
+    "database": "evaluation_stage",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "postgres://jvopdkruefhuob:dc3da6dcd66b2ff81819f908b3da1d6eb41304fb022634d5f905653dafb48309@ec2-54-86-224-85.compute-1.amazonaws.com:5432/dc09c9ejkhco40",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}

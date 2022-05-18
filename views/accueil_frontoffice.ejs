@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Backoffice</title>
+    <link rel="stylesheet" href="/static/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/assets/js/bootstrap.js">
+    <link rel="stylesheet" href="/static/assets/js/bootstrap.min.js">
+    <link rel="stylesheet" href="/static/assets/css/style.css">
+
+</head>
+<body>  
+    <% const login=""%> 
+    <div class="container">
+     
+        <div class="row" id="liste">
+            <div class="col-md-2"></div>
+            <div class="col-md-8" id="content">
+               
+                <h2 class="headerText">Ajouter trajet</h2> <br>
+
+                    <form action="/ajout_trajet" method="post">
+                        <label class="form-label">Départ</label>
+                        <div class="row" id="form-row">
+                            <div class="mb-3">
+                            <label class="form-label">Date et heure</label>
+                            <input type="text" name="[dateheure]" class="form-control" placeholder="XXXX ABC">
+                            </div>
+                            <div class="mb-3">
+                            <label class="form-label">Lieu</label>
+                            <input type="text" name="[lieu]" class="form-control" placeholder="Mazda, Renault...">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Kilometrage</label>
+                                <input type="text" name="[kilometrage]" class="form-control" placeholder="GT , 206">
+                            </div>
+                        </div>
+                        <label class="form-label">Arrivé</label>
+                        <div class="row" id="form-row">
+                        
+                            <div class="mb-3">
+                                <label class="form-label">Date et heure</label>
+                                <input type="text" name="[dateheure]" class="form-control" placeholder="XXXX ABC">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Lieu</label>
+                                <input type="text" name="[lieu]" class="form-control" placeholder="Mazda, Renault...">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Kilometrage</label>
+                                <input type="text" name="[kilometrage]" class="form-control" placeholder="GT , 206">
+                            </div>
+                        </div>
+                        <label class="form-label">Carburant</label>
+                        <div class="row" id="form-row">
+                       
+                            <div class="mb-3">
+                                <label class="form-label">Montant</label>
+                                <input type="text" name="[montant]" class="form-control" placeholder="GT , 206">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Litres</label>
+                                <input type="text" name="[litre]" class="form-control" placeholder="GT , 206">
+                            </div>
+                        
+                           
+                        </div>
+                        <div class="mb-3 pt-2">
+                            <button type="submit" class="btn btn-primary">Ajouter</button>
+                            </div>
+                      </form>
+                </div>
+                
+            
+
+
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row"></div>
+
+    </div>
+</body>
+</html>

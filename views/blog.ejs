@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Blog</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="/static/assets/img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="/static/assets/https://fonts.gstatic.com">
+    <link href="/static/assets/https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="/static/assets/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="/static/assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/static/assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+   
+    <%- include('./templates/header.ejs');%>
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5 mb-5">
+        <h1 class="display-4 text-white mb-3 mt-0 mt-lg-5">Blog</h1>
+        <div class="d-inline-flex text-white">
+            <p class="m-0"><a class="text-white" href="/static/assets/">Home</a></p>
+            <p class="m-0 px-2">/</p>
+            <p class="m-0">Blog</p>
+        </div>
+    </div>
+    <!-- Page Header Start -->
+
+
+    <!-- Blog Start -->
+    <div class="container py-5">
+        <div class="row">
+            
+            <!-- Blog Grid Start -->
+        <%blogs.forEach(blog => {  %>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="/static/assets/img/blog-1.jpg" alt="">
+                           
+                        </div>
+                        <div class="border border-top-0 mb-3" style="padding: 30px;">
+                            <div class="d-flex mb-3">
+                                <div class="d-flex align-items-center">
+                                   
+                                </div>
+                                <div class="d-flex align-items-center ml-4">
+                                    <i class="far fa-bookmark text-primary"></i>
+                                    <a class="text-muted ml-2" href="/static/assets/"><%=blog.dataValues.createdAt;%></a>
+                                </div>
+                            </div>
+                            <a class="h4 font-weight-bold" href="/detail_blog/<%=blog.dataValues.id;%>"><%=blog.dataValues.titre;%></a>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <%})%> 
+
+            <!-- Blog Grid End -->
+
+            <!-- Sidebar Start -->
+            <div class="col-lg-4 mt-5 mt-lg-0">
+              
+
+              
+
+              
+
+                <!-- Tags End -->
+
+                <!-- Plain Text Start -->
+                <div>
+                    <h3 class="font-weight-bold mb-4">A vous la lecture</h3>
+                    <div class="border p-3">
+                        Choisissez le blog qui vous intéresse le plus.
+                    </div>
+                </div>
+                <!-- Plain Text End -->
+            </div>
+            <!-- Sidebar End -->
+        </div>
+    </div>
+    <!-- Blog End -->
+
+    <%- include('./templates/footer.ejs');%>
+   
+
+    <!-- Back to Top -->
+    <a href="/static/assets/#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="/static/assets/https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="/static/assets/https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/assets/lib/easing/easing.min.js"></script>
+    <script src="/static/assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="/static/assets/lib/counterup/counterup.min.js"></script>
+    <script src="/static/assets/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="/static/assets/mail/jqBootstrapValidation.min.js"></script>
+    <script src="/static/assets/mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="/static/assets/js/main.js"></script>
+</body>
+
+</html>

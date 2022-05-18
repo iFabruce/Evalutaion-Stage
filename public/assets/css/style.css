@@ -1,0 +1,22 @@
+h1,h2,h3,h4,h5,h6,p,a{
+    font-family: Fira Code;
+}
+/* body{
+    height: 100vh;
+} */
+.container{
+    height: 1200px;
+}
+#content{
+    margin-top: 5%;
+}
+.headerText{
+    font-size: 2.2vw;
+    font-weight: 800;
+}
+#ajout{
+    padding: 2%;
+}
+#form-row{
+    padding-left: 10%;
+}

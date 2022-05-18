@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Backoffice</title>
+    <link rel="stylesheet" href="/static/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/assets/js/bootstrap.js">
+    <link rel="stylesheet" href="/static/assets/js/bootstrap.min.js">
+    <link rel="stylesheet" href="/static/assets/css/style.css">
+
+</head>
+<body>  
+    <% const login=""%> 
+    <div class="container">
+     
+        <div class="row" id="liste">
+            <div class="col-md-2"></div>
+            <div class="col-md-8" id="content">
+                <div class="rows">
+                    <h2 class="headerText">Liste véhicule</h2> <br>
+                    <table class="table">
+                        <thead class="table-dark">
+                        <th scope="col">Numero</th>
+                        <th scope="col">Marque</th>
+                        <th scope="col">Modele</th>
+                        <th scope="col">Type</th>
+
+
+                        </thead>
+                        <tbody>
+                        <%vehicules.forEach(vehicule => {  %>
+                            <tr>
+                                <td><%=vehicule.dataValues.numero;%></td>
+                                <td><%=vehicule.dataValues.marque;%></td>
+                                <td><%=vehicule.dataValues.modele;%></td>
+                                <td><%=vehicule.dataValues.type;%></td>
+                            </tr>
+                                    
+                        <%})%> 
+                        </tbody>
+                    
+                    </table>
+                </div><hr>
+                <h2 class="headerText">Ajouter véhicule</h2> <br>
+
+                <div class="row" id="ajout">
+                    
+                    <form action="/ajout_vehicule" method="post">
+                        <div class="mb-3">
+                          <label class="form-label">Numero</label>
+                          <input type="text" name="[numero]" class="form-control" placeholder="XXXX ABC">
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">Marque</label>
+                          <input type="text" name="[marque]" class="form-control" placeholder="Mazda, Renault...">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Modele</label>
+                            <input type="text" name="[modele]" class="form-control" placeholder="GT , 206">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Type</label>
+                           <select name="[type]" class="form-control">
+                               <option value="Legere">Legère</option>
+                               <option value="SUV">SUV</option>
+                               <option value="Utilitaire">Utilitaire</option>
+                               <option value="Camion">Camion</option>
+
+                           </select>
+                        </div>
+                        <div class="mb-3 pt-2">
+                        <button type="submit" class="btn btn-primary">Ajouter</button>
+                        </div>
+                      </form>
+                </div>
+                
+            
+
+
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row"></div>
+
+    </div>
+</body>
+</html>
